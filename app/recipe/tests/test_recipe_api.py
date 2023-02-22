@@ -36,7 +36,7 @@ def create_recipe(user, **params):
         'title': 'Sample recipe title',
         'time_minutes': 22,
         'price': Decimal('5.25'),
-        'description': 'SAmple description',
+        'description': 'Sample description',
         'link': 'http://example.com/recipe.pdf',
     }
     defaults.update(params)
@@ -234,6 +234,7 @@ class PrivateRecipeApiTests(TestCase):
         """Assign the recipe variable to the
         first item that was returned in recipes."""
         recipe = recipes[0]
+        """Check the tag linked to the recipe is set to 2."""
         self.assertEqual(recipe.tags.count(), 2)
         """Loop through each tag we expect to be created and
         check that they exist with correct name and user."""
