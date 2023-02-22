@@ -261,6 +261,8 @@ class PrivateRecipeApiTests(TestCase):
         self.assertEqual(recipes.count(), 1)
         recipe = recipes[0]
         self.assertEqual(recipe.tags.count(), 2)
+        """Get all the tags and check the
+        tag created above is in the list."""
         self.assertIn(tag_kenyan, recipe.tags.all())
         for tag in payload['tags']:
             exists = recipe.tags.filter(
@@ -347,6 +349,8 @@ class PrivateRecipeApiTests(TestCase):
         self.assertEqual(recipes.count(), 1)
         recipe = recipes[0]
         self.assertEqual(recipe.ingredients.count(), 2)
+        """Get all the ingredients and check the
+        ingredient created above is in the list."""
         self.assertIn(ingredient, recipe.ingredients.all())
         for ingredient in payload['ingredients']:
             exists = recipe.ingredients.filter(
