@@ -39,5 +39,3 @@ if settings.DEBUG:
         settings.MEDIA_URL,
         DOCUMENT_ROOT=settings.MEDIA_ROOT,
     )
-
-
