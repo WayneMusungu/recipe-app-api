@@ -442,4 +442,3 @@ class ImageUploadTest(TestCase):
             self.assertIn('image', res.data)
             self.assertTrue(os.path.exists(self.recipe.image.path))
 
-    def tes
