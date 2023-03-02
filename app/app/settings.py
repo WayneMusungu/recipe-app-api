@@ -144,8 +144,5 @@ AUTH_USER_MODEL = 'core.User'
 # Configuration to REST_FRAMEWORK to generate schem using drf_spectacular
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-}
-
-SPECTACULAR_SETTINGS = {
     'COMPONENT_SPLIT_REQUEST': True,
 }
